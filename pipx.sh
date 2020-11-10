@@ -6,6 +6,8 @@ rm ../odoo/custom/dependencies/pip.txt
 
 #Creamos el fichero y le añadimos contenido
 
+echo "Añadiendo dependencias..."
+echo ""
 touch ../odoo/custom/dependencies/pip.txt
 
 echo "git+https://github.com/OCA/openupgradelib.git@master" >> ../odoo/custom/dependencies/pip.txt
@@ -16,4 +18,12 @@ echo "xlsxwriter" >> ../odoo/custom/dependencies/pip.txt
 echo "xlrd" >> ../odoo/custom/dependencies/pip.txt
 echo "pyOpenSSL" >> ../odoo/custom/dependencies/pip.txt
 echo "zeep" >> ../odoo/custom/dependencies/pip.txt
+
+#instalamos las librerias
+echo "Instalando librerías"
+echo ""
+invoke img-build --pull
+
+echo ""
+echo "Librerías instaladas correctamente"
 
