@@ -18,10 +18,13 @@ echo "xlsxwriter" >> ../odoo/custom/dependencies/pip.txt
 echo "xlrd" >> ../odoo/custom/dependencies/pip.txt
 echo "pyOpenSSL" >> ../odoo/custom/dependencies/pip.txt
 echo "zeep" >> ../odoo/custom/dependencies/pip.txt
+echo "python-barcode" >> ../odoo/custom/dependencies/pip.txt
+echo "qrcode[pil]" >> ../odoo/custom/dependencies/pip.txt
 
 #instalamos las librerias
 echo "Instalando librerías"
 echo ""
+cd ..
 invoke img-build --pull
 
 echo ""
