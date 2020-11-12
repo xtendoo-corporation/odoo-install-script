@@ -5,6 +5,7 @@ echo "montando directorio de odoo"
 echo ""
 
 sleep 1
+cd ..
 
 copier copy gh:Tecnativa/doodba-copier-template ./
 
