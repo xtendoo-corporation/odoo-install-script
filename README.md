@@ -1,5 +1,5 @@
 # odoo-install-script  
-# Repositorio con todo lo necesario para levantar odoo V13 con todo lo necesario:  
+# Repositorio con todo lo necesario para levantar odoo V13:  
 ##IMPORTANTE: Antes de descargar este repositorio, debemos crear la carpeta que contendra odoo, p.e: "xtendoo" y descargarlo dentro del mismo, para que todo funcione correctamente.  
 #Scripts:  
 #ubuntu_prepair.sh -> Script que realiza toda la instalación de aplicaciones básicas (docker, copier, etc) para comenzar a instalar odoo.  
