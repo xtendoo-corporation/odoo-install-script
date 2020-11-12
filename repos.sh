@@ -12,6 +12,8 @@ echo "Añadiendo PRs al fichero repos.yaml"
 echo ""
 touch ../odoo/custom/src/repos.yaml
 
+sleep 1
+
 echo '# See https://github.com/Tecnativa/doodba#optodoocustomsrcreposyaml' >> ../odoo/custom/src/repos.yaml
 echo './odoo:' >> ../odoo/custom/src/repos.yaml
 echo '  defaults:' >> ../odoo/custom/src/repos.yaml

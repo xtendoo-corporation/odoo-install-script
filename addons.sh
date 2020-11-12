@@ -12,6 +12,8 @@ echo "Añadiendo modulos al fichero addons.yaml"
 echo ""
 touch ../odoo/custom/src/addons.yaml
 
+sleep 1
+
 echo 'account-financial-reporting: ["*"]' >> ../odoo/custom/src/addons.yaml
 echo 'account-invoice-reporting: ["*"]' >> ../odoo/custom/src/addons.yaml
 echo 'account-invoicing: ["*"]' >> ../odoo/custom/src/addons.yaml

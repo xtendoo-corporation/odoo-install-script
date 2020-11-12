@@ -10,6 +10,8 @@ echo "Añadiendo dependencias..."
 echo ""
 touch ../odoo/custom/dependencies/pip.txt
 
+sleep 1
+
 echo "git+https://github.com/OCA/openupgradelib.git@master" >> ../odoo/custom/dependencies/pip.txt
 echo "unicodecsv" >> ../odoo/custom/dependencies/pip.txt
 echo "unidecode" >> ../odoo/custom/dependencies/pip.txt
@@ -24,6 +26,9 @@ echo "qrcode[pil]" >> ../odoo/custom/dependencies/pip.txt
 #instalamos las librerias
 echo "Instalando librerías"
 echo ""
+
+sleep 1
+
 cd ..
 invoke img-build --pull
 

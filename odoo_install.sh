@@ -1,6 +1,22 @@
 #!/bin/bash
+#Montamos el scafoldding de doodba
 
-#primero llamamos a addons.sh y repos.sh
+echo "montando directorio de odoo"
+echo ""
+
+sleep 1
+
+copier copy gh:Tecnativa/doodba-copier-template ./
+
+echo ""
+echo "Inicializamos la base de datos"
+echo ""
+
+sleep 1
+
+docker-compose run --rm odoo --stop-after-init -i base
+
+#Llamamos a addons.sh y repos.sh
 echo ""
 echo "Preparando ficheros *.yaml"
 echo ""
@@ -26,25 +42,25 @@ echo ""
 echo "Instalando addons de ODOO"
 echo ""
 
-#docker-compose run --rm odoo odoo -d devel -i $odoo_addons --stop-after-init --without-demo=all
+docker-compose run --rm odoo odoo -d devel -i $odoo_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Instalando addons de L10n_es"
 echo ""
 
-#docker-compose run --rm odoo odoo -d devel -i $spanish_addons --stop-after-init --without-demo=all
+docker-compose run --rm odoo odoo -d devel -i $spanish_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Instalando addons DEFAULT"
 echo ""
 
-#docker-compose run --rm odoo odoo -d devel -i $default_addons --stop-after-init --without-demo=all
+docker-compose run --rm odoo odoo -d devel -i $default_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Instalando addons CUSTOM"
 echo ""
 
-#docker-compose run --rm odoo odoo -d devel -i $custom_addons --stop-after-init --without-demo=all
+docker-compose run --rm odoo odoo -d devel -i $custom_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Fin del SCRIPT"
