@@ -6,5 +6,5 @@
 #odoo_install.sh -> Script de instalación de Odoo.  
 #addons.sh -> Rellena el fichero addons.yaml.  
 #repos.sh -> Rellena el fichero repos.yaml.  
-#install_addons --> Ejecuta addons.sh y repos.sh, realzia el "invoke git-aggregate" e instala todos los módulos indicados. 
+#install_addons --> Ejecuta addons.sh y repos.sh, ejecuta el "invoke git-aggregate" e instala todos los módulos indicados. 
 
