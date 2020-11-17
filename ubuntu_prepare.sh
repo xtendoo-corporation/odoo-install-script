@@ -9,13 +9,13 @@ sleep 1
 
 sudo apt-get update -y || sudo apt-get upgrade -y
 
-echo ""
-echo "Instalando git"
-echo ""
+#echo ""
+#echo "Instalando git"
+#echo ""
 
-sleep 1
+#sleep 1
 
-sudo apt install git-all -y
+#sudo apt install git-all -y
 
 echo ""
 echo "Instalando Docker-Engine"

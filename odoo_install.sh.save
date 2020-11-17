@@ -7,7 +7,7 @@ echo ""
 sleep 1
 cd ..
 
-copier copy gh:Tecnativa/doodba-copier-template ./
+#copier copy gh:Tecnativa/doodba-copier-template ./
 
 echo ""
 echo "Instalamos dependencias de pipx"
@@ -15,28 +15,33 @@ echo ""
 
 sleep 1
 
-sh odoo-install-script/pipx.sh
+#sh odoo-install-script/pipx.sh
 
 echo ""
 echo "Inicializamos la base de datos"
 echo ""
 
+docker-compose up
 sleep 1
+
+#docker-compose run --rm odoo --stop-after-init -i base
 
 #Llamamos a addons.sh y repos.sh
 echo ""
 echo "Preparando ficheros *.yaml"
 echo ""
 
-sh odoo-install-script/addons.sh
+#sh odoo-install-script/addons.sh
 
-sh odoo-install-script/repos.sh
+#sh odoo-install-script/repos.sh
 
 echo ""
 echo "Descargando addons"
 echo ""
 
-invoke git-aggregate
+cd ..
+
+#invoke git-aggregate
 
 odoo_addons="sale,invoice,crm,website,stock,account,sale_management,website_sale,board,contacts,mail,calendar,im_livechat,"
 spanish_addons="l10n_es,l10n_es_aeat,l10n_es_aeat_mod111,l10n_es_aeat_mod115,l10n_es_aeat_mod123,l10n_es_aeat_mod303,l10n_es_aeat_mod347,l10n_es_mis_report,l10n_es_partner,l10n_es_toponyms,l10n_es_vat_book,"
@@ -46,25 +51,25 @@ echo ""
 echo "Instalando addons de ODOO"
 echo ""
 
-docker-compose run --rm odoo odoo -d devel -i $odoo_addons --stop-after-init --without-demo=all
+#docker-compose run --rm odoo odoo -d devel -i $odoo_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Instalando addons de L10n_es"
 echo ""
 
-docker-compose run --rm odoo odoo -d devel -i $spanish_addons --stop-after-init --without-demo=all
+#docker-compose run --rm odoo odoo -d devel -i $spanish_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Instalando addons DEFAULT"
 echo ""
 
-docker-compose run --rm odoo odoo -d devel -i $default_addons --stop-after-init --without-demo=all
+#docker-compose run --rm odoo odoo -d devel -i $default_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Instalando addons CUSTOM"
 echo ""
 
-docker-compose run --rm odoo odoo -d devel -i $custom_addons --stop-after-init --without-demo=all
+#docker-compose run --rm odoo odoo -d devel -i $custom_addons --stop-after-init --without-demo=all
 
 echo ""
 echo "Fin del SCRIPT"
