@@ -17,6 +17,6 @@
 #cd nombre_carpeta  
 # Descargamos el repositorio dentro de dicgha carpeta:  
 #git-clone https://github.com/xtendoo-corporation/odoo-install-script.git --branch=13.0  
-# Una vez realizados estos pasos, debemos ejecutar el script ubuntu_prepare.sh, para preparar la maquina servidor, instalar docker,pipx, etc.  
-# Una vez ejecutado ubuntu_prepare.sh, cerramos el terminal y la conexión ssh, solo nos queda volver a conextarnos con el servidor y ejecutar el script odoo_install, con el cuál, ya finalziamos la instalación de Odoo. 
+#Una vez realizados estos pasos, debemos ejecutar el script ubuntu_prepare.sh, para preparar la maquina servidor, instalar docker,pipx, etc.  
+#Una vez ejecutado ubuntu_prepare.sh, cerramos el terminal y la conexión ssh, solo nos queda volver a conextarnos con el servidor y ejecutar el script odoo_install, con el cuál, ya finalziamos la instalación de Odoo. 
 
